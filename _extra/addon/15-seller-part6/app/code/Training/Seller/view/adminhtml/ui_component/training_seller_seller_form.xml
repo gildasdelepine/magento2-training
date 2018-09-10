@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">training_seller_seller_form.seller_form_data_source</item>
+        </item>
+        <item name="label" xsi:type="string" translate="true">Main Information</item>
+        <item name="template" xsi:type="string">templates/form/collapsible</item>
+    </argument>
+    <settings>
+        <buttons>
+            <button name="save_and_continue" class="Training\Seller\Block\Adminhtml\Seller\Edit\SaveAndContinueButton"/>
+            <button name="save"              class="Training\Seller\Block\Adminhtml\Seller\Edit\SaveButton"/>
+            <button name="reset"             class="Training\Seller\Block\Adminhtml\Seller\Edit\ResetButton"/>
+            <button name="delete"            class="Training\Seller\Block\Adminhtml\Seller\Edit\DeleteButton"/>
+            <button name="back"              class="Training\Seller\Block\Adminhtml\Seller\Edit\BackButton"/>
+        </buttons>
+        <namespace>training_seller_seller_form</namespace>
+        <dataScope>data</dataScope>
+        <deps>
+            <dep>training_seller_seller_form.seller_form_data_source</dep>
+        </deps>
+    </settings>
+    <dataSource name="seller_form_data_source">
+        <argument name="data" xsi:type="array">
+            <item name="js_config" xsi:type="array">
+                <item name="component" xsi:type="string">Magento_Ui/js/form/provider</item>
+            </item>
+        </argument>
+        <settings>
+            <submitUrl path="training_seller/seller/save"/>
+        </settings>
+        <aclResource>Training_Seller::manage</aclResource>
+        <dataProvider class="Training\Seller\Ui\Component\Form\SellerDataProvider" name="seller_form_data_source">
+            <settings>
+                <requestFieldName>seller_id</requestFieldName>
+                <primaryFieldName>seller_id</primaryFieldName>
+            </settings>
+        </dataProvider>
+    </dataSource>
+    <fieldset name="main_information">
+        <settings>
+            <label translate="true">Main Information</label>
+        </settings>
+        <field name="seller_id" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">seller</item>
+                </item>
+            </argument>
+            <settings>
+                <dataType>text</dataType>
+                <visible>false</visible>
+                <dataScope>seller_id</dataScope>
+            </settings>
+        </field>
+        <field name="identifier" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">seller</item>
+                </item>
+            </argument>
+            <settings>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+                <dataType>text</dataType>
+                <label translate="true">Identifier</label>
+                <dataScope>identifier</dataScope>
+            </settings>
+        </field>
+        <field name="name" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">seller</item>
+                </item>
+            </argument>
+            <settings>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+                <dataType>text</dataType>
+                <label translate="true">Name</label>
+                <dataScope>name</dataScope>
+            </settings>
+        </field>
+        <field name="description" formElement="wysiwyg">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">seller</item>
+                </item>
+            </argument>
+            <settings>
+                <dataType>textarea</dataType>
+                <label translate="true">Description</label>
+                <dataScope>description</dataScope>
+            </settings>
+            <formElements>
+                <wysiwyg>
+                    <settings>
+                        <wysiwyg>true</wysiwyg>
+                    </settings>
+                </wysiwyg>
+            </formElements>
+        </field>
+    </fieldset>
+</form>
