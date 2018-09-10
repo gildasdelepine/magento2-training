@@ -38,7 +38,8 @@
         "pdepend/pdepend": "2.5.2",
         "friendsofphp/php-cs-fixer": "~2.2.1",
         "lusitanian/oauth": "~0.8.10",
-        "sebastian/phpcpd": "2.0.4"
+        "sebastian/phpcpd": "2.0.4",
+        "smile/module-debug-toolbar": "^3.1"
     },
     "autoload": {
         "psr-4": {

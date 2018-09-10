@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c8a483869749401705988cc9b5d05f0b",
+    "content-hash": "7825049aa1dc888efb99172df96703f5",
     "packages": [
         {
             "name": "amzn/amazon-pay-and-login-magento-2-module",
@@ -12293,6 +12293,52 @@
             "description": "Library that helps with managing the version number of Git-hosted PHP projects",
             "homepage": "https://github.com/sebastianbergmann/version",
             "time": "2016-10-03T07:35:21+00:00"
+        },
+        {
+            "name": "smile/module-debug-toolbar",
+            "version": "3.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Smile-SA/magento2-module-debug-toolbar.git",
+                "reference": "ff2367e8299143651acd870fc720b82e91c16aea"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Smile-SA/magento2-module-debug-toolbar/zipball/ff2367e8299143651acd870fc720b82e91c16aea",
+                "reference": "ff2367e8299143651acd870fc720b82e91c16aea",
+                "shasum": ""
+            },
+            "require": {
+                "magento/framework": "~101.0.0",
+                "php": "~7.0.6|~7.1.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Smile\\DebugToolbar\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "EPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Laurent Minguet",
+                    "email": "dirtech@smile.fr"
+                }
+            ],
+            "description": "Smile Debug Toolbar",
+            "homepage": "https://github.com/Smile-SA/magento2-module-debug-toolbar",
+            "keywords": [
+                "debug",
+                "magento2",
+                "toolbar"
+            ],
+            "time": "2018-08-01T15:11:45+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",

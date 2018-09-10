@@ -143,6 +143,7 @@ return [
         'Magento_WishlistAnalytics' => 1,
         'Magento_WishlistSampleData' => 1,
         'Shopial_Facebook' => 1,
+        'Smile_DebugToolbar' => 1,
         'Temando_Shipping' => 1,
         'Vertex_Tax' => 1
     ]
