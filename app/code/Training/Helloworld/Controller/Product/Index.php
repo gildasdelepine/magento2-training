@@ -9,10 +9,12 @@ namespace Training\Helloworld\Controller\Product;
 
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;
+use Magento\Framework\App\ObjectManager;
 use Magento\Framework\Controller\ResultFactory;
 use Magento\Catalog\Model\ProductFactory as ProductFactory;
 use Magento\Catalog\Model\Product as Product;
 use Magento\Framework\Exception\NotFoundException;
+use Psr\Log\LoggerInterface;
 
 class Index extends Action
 {
@@ -45,6 +47,9 @@ class Index extends Action
         if(!$pid) {
             throw new NotFoundException(__('product id not found'));
         }
+
+        // !!!!! Log info about a object => Production debug ->result visible in /var/log/system/log !!!!!
+        ObjectManager::getInstance()->get(LoggerInterface::class)->info($pid);
 
         // get the product
         $product = $this->productFactory->create();
