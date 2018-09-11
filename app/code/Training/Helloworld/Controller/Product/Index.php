@@ -15,6 +15,7 @@ use Magento\Catalog\Model\ProductFactory as ProductFactory;
 use Magento\Catalog\Model\Product as Product;
 use Magento\Framework\Exception\NotFoundException;
 use Psr\Log\LoggerInterface;
+use Magento\Framework\Controller\Result\Raw as ResultRaw;
 
 class Index extends Action
 {
@@ -70,6 +71,7 @@ class Index extends Action
     {
         $product = $this->getProduct();
 
+        /** @var ResultRaw $result */
         $result = $this->resultFactory->create(ResultFactory::TYPE_RAW);
         $result->setContents('Product : '. $product->getName());
 
