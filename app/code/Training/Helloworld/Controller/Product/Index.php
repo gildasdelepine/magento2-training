@@ -68,7 +68,6 @@ class Index extends Action
      */
     public function execute()
     {
-
         $product = $this->getProduct();
 
         $result = $this->resultFactory->create(ResultFactory::TYPE_RAW);

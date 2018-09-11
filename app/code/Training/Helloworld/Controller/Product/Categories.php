@@ -12,6 +12,7 @@ use Magento\Catalog\Model\Category as CategoryModel;
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;
 use Magento\Framework\Controller\ResultFactory;
+use Magento\Framework\Controller\Result\Raw as ResultRaw;
 
 class Categories extends Action
 {
@@ -79,6 +80,8 @@ class Categories extends Action
             $html.= '</li>';
         }
         $html.= '</ul>';
+
+        /** @var ResultRaw $result */
         $result = $this->resultFactory->create(ResultFactory::TYPE_RAW);
         $result->setContents($html);
         return $result;
