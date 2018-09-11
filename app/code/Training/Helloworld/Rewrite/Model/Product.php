@@ -13,6 +13,6 @@ class Product extends BaseProduct
      */
     public function getName()
     {
-        return parent::getName() . ' (Hello World !)';
+        return parent::getName() . ' (Hello World)';
     }
 }
