@@ -12,7 +12,7 @@ use Training\Seller\Api\Data\SellerInterface;
  *
  * @api
  */
-interface BlockRepositoryInterface
+interface SellerRepositoryInterface
 {
     /**
      * Retrieve seller.
