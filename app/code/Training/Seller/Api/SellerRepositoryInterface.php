@@ -47,7 +47,7 @@ interface SellerRepositoryInterface
      * @return \Training\Seller\Api\Data\SellerInterface
      * @throws \Magento\Framework\Exception\CouldNotSaveException
      */
-    public function save(SellerInterface $seller);
+    public function save(SellerInterface $object);
 
     /**
      * Delete seller by Id.

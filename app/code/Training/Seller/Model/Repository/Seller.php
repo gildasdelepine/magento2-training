@@ -95,9 +95,9 @@ class Seller implements SellerRepositoryInterface
      * @return \Training\Seller\Api\Data\SellerInterface
      * @throws \Magento\Framework\Exception\CouldNotSaveException
      */
-    public function save(SellerInterface $seller)
+    public function save(SellerInterface $object)
     {
-        return $this->sellerRepositoryManager->saveEntity($seller);
+        return $this->sellerRepositoryManager->saveEntity($object);
     }
 
     /**

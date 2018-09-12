@@ -85,7 +85,12 @@ class Seller extends AbstractModel implements IdentityInterface, SellerInterface
      */
     public function getUpdatedAt()
     {
-        return (string) $this->getData(self::FIELD_UPDATED_AT);
+        $value = $this->getData(self::FIELD_UPDATED_AT);
+        if ($value !== null) {
+            $value = (string) $value;
+        }
+
+        return $value;
     }
 
     /**
