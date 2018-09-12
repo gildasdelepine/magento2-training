@@ -8,7 +8,7 @@
     <type name="Magento\Framework\Model\Entity\RepositoryFactory">
         <arguments>
             <argument name="entities" xsi:type="array">
-                <item name="Training\Seller\Api\Data\SellerInterface" xsi:type="string">Training\Seller\Api\Data\SellerRepositoryInterface</item>
+                <item name="Training\Seller\Api\Data\SellerInterface" xsi:type="string">\Training\Seller\Api\Data\SellerRepositoryInterface</item>
             </argument>
         </arguments>
     </type>

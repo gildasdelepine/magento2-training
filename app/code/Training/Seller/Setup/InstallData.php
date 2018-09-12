@@ -8,22 +8,25 @@ use Magento\Framework\Setup\InstallDataInterface;
 use Magento\Framework\Setup\ModuleContextInterface;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Training\Seller\Api\Data\SellerInterface;
-use Training\Seller\Api\SellerRepositoryInterface;
 use Training\Seller\Api\Data\SellerInterfaceFactory;
+use Training\Seller\Api\SellerRepositoryInterface;
 
 class InstallData implements InstallDataInterface
 {
-    /** @var SellerInterfaceFactory */
-    protected $sellerFactory;
-
-    /** @var SellerRepositoryInterface */
-    protected $sellerRepository;
+    /**
+     * @var SellerRepositoryInterface
+     */
+    private $sellerRepository;
+    /**
+     * @var SellerInterfaceFactory
+     */
+    private $sellerFactory;
 
     /**
      * @param SellerRepositoryInterface $sellerRepository
      * @param SellerInterfaceFactory $sellerFactory
      */
-    public function _construct(
+    public function __construct(
         SellerRepositoryInterface $sellerRepository,
         SellerInterfaceFactory $sellerFactory
     ) {

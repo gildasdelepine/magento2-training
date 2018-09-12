@@ -146,6 +146,7 @@ return [
         'Smile_DebugToolbar' => 1,
         'Temando_Shipping' => 1,
         'Training_Helloworld' => 1,
+        'Training_Seller' => 1,
         'Vertex_Tax' => 1
     ]
 ];
