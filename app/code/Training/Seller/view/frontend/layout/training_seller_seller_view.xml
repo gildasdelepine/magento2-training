@@ -8,6 +8,8 @@
         <title>Seller View</title>
     </head>
     <body>
+        <referenceBlock name="training.seller.content.top" remove="true"/>
+
         <referenceContainer name="content">
             <block
                 class="Training\Seller\Block\Seller\View"
