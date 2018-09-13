@@ -7,6 +7,7 @@ namespace Training\Seller\Controller\Seller;
 use Magento\Framework\Api\SearchCriteriaBuilder;
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;
+use Magento\Framework\Registry;
 use Training\Seller\Api\SellerRepositoryInterface;
 
 /**
@@ -28,19 +29,25 @@ abstract class AbstractAction extends Action
      */
     protected $searchCriteriaBuilder;
 
+    /** @var Registry $registry */
+    protected $registry;
+
+
     /**
-     * @param Context                   $context
+     * @param Context $context
      * @param SellerRepositoryInterface $sellerRepository
-     * @param SearchCriteriaBuilder     $searchCriteriaBuilder
+     * @param SearchCriteriaBuilder $searchCriteriaBuilder
+     * @param Registry $registry
      */
     public function __construct(
         Context                   $context,
         SellerRepositoryInterface $sellerRepository,
-        SearchCriteriaBuilder     $searchCriteriaBuilder
+        SearchCriteriaBuilder     $searchCriteriaBuilder,
+        Registry $registry
     ) {
+        parent::__construct($context);
         $this->sellerRepository      = $sellerRepository;
         $this->searchCriteriaBuilder = $searchCriteriaBuilder;
-
-        parent::__construct($context);
+        $this->registry              = $registry;
     }
 }
