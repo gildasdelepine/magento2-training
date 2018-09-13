@@ -1,10 +1,13 @@
 <?php
 /**
+ * Magento 2 Training Project
  * Module Training/Seller
  */
 namespace Training\Seller\Controller\Seller;
 
+use Magento\Framework\Api\FilterBuilder;
 use Magento\Framework\Api\SearchCriteriaBuilder;
+use Magento\Framework\Api\SortOrderBuilder;
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;
 use Magento\Framework\Registry;
@@ -20,34 +23,52 @@ use Training\Seller\Api\SellerRepositoryInterface;
 abstract class AbstractAction extends Action
 {
     /**
+     * @var Registry
+     */
+    protected $registry;
+
+    /**
      * @var SellerRepositoryInterface
      */
     protected $sellerRepository;
+
+    /**
+     * @var FilterBuilder
+     */
+    protected $filterBuilder;
+
+    /**
+     * @var SortOrderBuilder
+     */
+    protected $sortOrderBuilder;
 
     /**
      * @var SearchCriteriaBuilder
      */
     protected $searchCriteriaBuilder;
 
-    /** @var Registry $registry */
-    protected $registry;
-
-
     /**
-     * @param Context $context
+     * @param Context                   $context
+     * @param Registry                  $registry
      * @param SellerRepositoryInterface $sellerRepository
-     * @param SearchCriteriaBuilder $searchCriteriaBuilder
-     * @param Registry $registry
+     * @param FilterBuilder             $filterBuilder
+     * @param SortOrderBuilder          $sortOrderBuilder
+     * @param SearchCriteriaBuilder     $searchCriteriaBuilder
      */
     public function __construct(
         Context                   $context,
+        Registry                  $registry,
         SellerRepositoryInterface $sellerRepository,
-        SearchCriteriaBuilder     $searchCriteriaBuilder,
-        Registry $registry
+        FilterBuilder             $filterBuilder,
+        SortOrderBuilder          $sortOrderBuilder,
+        SearchCriteriaBuilder     $searchCriteriaBuilder
     ) {
-        parent::__construct($context);
-        $this->sellerRepository      = $sellerRepository;
-        $this->searchCriteriaBuilder = $searchCriteriaBuilder;
         $this->registry              = $registry;
+        $this->sellerRepository      = $sellerRepository;
+        $this->filterBuilder         = $filterBuilder;
+        $this->sortOrderBuilder      = $sortOrderBuilder;
+        $this->searchCriteriaBuilder = $searchCriteriaBuilder;
+
+        parent::__construct($context);
     }
 }

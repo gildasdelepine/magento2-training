@@ -1,8 +1,5 @@
 <?php
-/**
- * Training_Seller::view.phtml
- */
-/** @var Training\Seller\Block\Seller\View $block */
+/** @var \Training\Seller\Block\Seller\View $block */
 $seller = $block->getCurrentSeller();
 ?>
 <table>
@@ -19,6 +16,4 @@ $seller = $block->getCurrentSeller();
         <td><?php echo $block->escapeHtml($seller->getName()); ?></td>
     </tr>
 </table>
-<a href="<?php echo $block->escapeHtml($block->getSellersUrl()); ?>">
-    <?php /* @escapeNotVerified */ echo __('Back to the list'); ?>
-</a>
+<a href="<?php echo $block->getSellersUrl(); ?>"><?php /* @escapeNotVerified */ echo __('Back to the list'); ?></a>

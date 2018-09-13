@@ -1,13 +1,18 @@
 <?php
 /**
+ * Magento 2 Training Project
  * Module Training/Seller
  */
 namespace Training\Seller\Block\Seller;
 
-
 use Magento\Framework\DataObject\IdentityInterface;
-use Training\Seller\Model\Seller;
 
+/**
+ * Block View
+ *
+ * @author    Laurent MINGUET <lamin@smile.fr>
+ * @copyright 2018 Smile
+ */
 class View extends AbstractBlock implements IdentityInterface
 {
     /**
@@ -23,9 +28,7 @@ class View extends AbstractBlock implements IdentityInterface
     }
 
     /**
-     * Return unique ID(s) for each object in system
-     *
-     * @return string[]
+     * {@inheritdoc}
      */
     public function getIdentities()
     {
@@ -40,11 +43,12 @@ class View extends AbstractBlock implements IdentityInterface
     }
 
     /**
-     * Get the current seller.
+     * Get the current seller
      *
-     * @return Seller
+     * @return \Training\Seller\Model\Seller
      */
-    public function getCurrentSeller() {
-        return $currentSeller = $this->registry->registry('current_seller');
+    public function getCurrentSeller()
+    {
+        return $this->registry->registry('current_seller');
     }
 }

@@ -1,5 +1,6 @@
 <?php
 /**
+ * Magento 2 Training Project
  * Module Training/Seller
  */
 namespace Training\Seller\Block\Seller;
@@ -11,6 +12,9 @@ use Training\Seller\Helper\Url as UrlHelper;
 
 /**
  * Abstract Block
+ *
+ * @author    Laurent MINGUET <lamin@smile.fr>
+ * @copyright 2018 Smile
  */
 abstract class AbstractBlock extends Template
 {

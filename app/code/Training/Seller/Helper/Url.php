@@ -1,5 +1,6 @@
 <?php
 /**
+ * Magento 2 Training Project
  * Module Training/Seller
  */
 namespace Training\Seller\Helper;
@@ -8,6 +9,9 @@ use Magento\Framework\App\Helper\AbstractHelper;
 
 /**
  * Helper: Url
+ *
+ * @author    Laurent MINGUET <lamin@smile.fr>
+ * @copyright 2018 Smile
  */
 class Url extends AbstractHelper
 {

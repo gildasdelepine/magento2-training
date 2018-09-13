@@ -1,19 +1,22 @@
 <?php
 /**
+ * Magento 2 Training Project
  * Module Training/Seller
  */
 namespace Training\Seller\Controller\Seller;
 
 use Magento\Framework\Controller\ResultFactory;
-use Magento\Framework\View\Result\Page as ResultPage;
 use Magento\Framework\Exception\NoSuchEntityException;
 use Magento\Framework\Exception\NotFoundException;
-
+use Magento\Framework\View\Result\Page as ResultPage;
 
 /**
- * Action: view
+ * Action : seller/view
+ *
+ * @author    Laurent MINGUET <lamin@smile.fr>
+ * @copyright 2018 Smile
  */
-class view extends AbstractAction
+class View extends AbstractAction
 {
     /**
      * {@inheritdoc}
