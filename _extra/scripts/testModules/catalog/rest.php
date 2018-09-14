@@ -8,5 +8,5 @@ $client->setMagentoParams($params);
 $client->connect();
 
 
-$client->get('rest/V1/products/24-UB02');
 $client->get('rest/V1/categories/3');
+$client->get('rest/V1/products/24-MB01');
