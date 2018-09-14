@@ -68,3 +68,4 @@ atlassian*
 !/generated/.htaccess
 .DS_Store
 /_extra/scripts/testModules/params.php
+/build/
