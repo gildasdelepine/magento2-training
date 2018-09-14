@@ -56,7 +56,6 @@ class CronLoggerCommand extends Command
         $output->writeln('<info>Cron - Begin</info>');
 
         $this->cronLogger->execute();
-        $output->writeln('<info>Cron - End</info>');
 
         $output->writeln('<info>Cron - End</info>');
 
