@@ -1,6 +1,5 @@
 <?php
 /**
- * Magento 2 Training Project
  * Module Training/Seller
  */
 namespace Training\Seller\Test\Unit\Model;
@@ -11,9 +10,6 @@ use Training\Seller\Model\Seller as ModelSeller;
 
 /**
  * Seller Model test
- *
- * @author    Laurent MINGUET <lamin@smile.fr>
- * @copyright 2018 Smile
  */
 class SellerTest extends TestCase
 {
