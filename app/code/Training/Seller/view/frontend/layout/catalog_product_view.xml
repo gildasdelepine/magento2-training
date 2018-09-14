@@ -1,10 +1,4 @@
 <?xml version="1.0"?>
-<!--
-/**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
- */
--->
 <page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceBlock name="training.seller.content.top">
@@ -12,6 +6,13 @@
                 <argument name="background_color" xsi:type="string">#DDFFDD</argument>
                 <argument name="border_color" xsi:type="string">#AADDAA</argument>
             </arguments>
+        </referenceBlock>
+        <referenceBlock name="product.info.details">
+            <block class="Training\Seller\Block\Product\Sellers" name="product.info.details.seller" as="Sellers" template="Training_Seller::product/sellers.phtml" group="detailed_info">
+                <arguments>
+                    <argument name="title" xsi:type="string" translate="true">Sellers</argument>
+                </arguments>
+            </block>
         </referenceBlock>
     </body>
 </page>
