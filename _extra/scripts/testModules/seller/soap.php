@@ -15,6 +15,7 @@ $object = [
     'object' => [
         'identifier' => 'cots',
         'name'       => 'Constantin Tsiolkovski',
+        'description'=> 'Une description du seller cots',
     ]
 ];
 

@@ -84,5 +84,24 @@
                 <dataScope>name</dataScope>
             </settings>
         </field>
+        <field name="description" formElement="wysiwyg">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">seller</item>
+                </item>
+            </argument>
+            <settings>
+                <dataType>textarea</dataType>
+                <label translate="true">Description</label>
+                <dataScope>description</dataScope>
+            </settings>
+            <formElements>
+                <wysiwyg>
+                    <settings>
+                        <wysiwyg>true</wysiwyg>
+                    </settings>
+                </wysiwyg>
+            </formElements>
+        </field>
     </fieldset>
 </form>
