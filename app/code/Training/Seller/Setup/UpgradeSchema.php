@@ -31,7 +31,7 @@ class UpgradeSchema implements UpgradeSchemaInterface
         $setup->endSetup();
     }
 
-    public function addFieldDescription(SchemaSetupInterface $setup) {
+    protected function addFieldDescription(SchemaSetupInterface $setup) {
         $tableName = $setup->getTable(SellerInterface::TABLE_NAME);
 
         $setup->getConnection()->addColumn(

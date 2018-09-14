@@ -7,8 +7,8 @@ $client->setDebug(true);
 $client->setMagentoParams($params);
 $client->addService('trainingSellerSellerRepositoryV1');
 
-$client->trainingSellerSellerRepositoryV1GetById(['objectId' => 1]);
-$client->trainingSellerSellerRepositoryV1GetByIdentifier(['objectIdentifier' => 'main']);
+$client->trainingSellerSellerRepositoryV1GetById(['objectId' => 10]);
+$client->trainingSellerSellerRepositoryV1GetByIdentifier(['objectIdentifier' => 'seller_1']);
 
 
 $object = [
