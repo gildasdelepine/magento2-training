@@ -91,13 +91,6 @@ class Sellers extends AbstractBlock implements IdentityInterface
      */
     public function getProductSellers()
     {
-        if(is_null($this->sellers)) {
-            $this->sellers = [];
-            $product = $this->getCurrentProduct();
-            if ($product) {
-                $this->sellers = $this->dataHelper->getProductSellers($product);
-            }
-        }
-        return $this->sellers;
+        return $this->getCurrentProduct()->getExtensionAttributes()->getSellers();
     }
 }
