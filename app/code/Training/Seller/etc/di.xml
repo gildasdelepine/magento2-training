@@ -58,6 +58,7 @@
         <arguments>
             <argument name="commands" xsi:type="array">
                 <item name="training_seller_get" xsi:type="object">Training\Seller\Console\Command\GetCommand</item>
+                <item name="training_seller_cron_logger" xsi:type="object">Training\Seller\Console\Command\CronLoggerCommand</item>
             </argument>
         </arguments>
     </type>
